@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Notas de clase</title>
+    <link rel="stylesheet" href="assets/styles/app.css" />
+    <script src="assets/scripts/app.js" defer></script>
+  </head>
+  <body>
+    <div id="backdrop"></div>
+    <div class="modal" id="add-modal">
+      <div class="modal__content">
+        <label type= "text" for="title">Estudiante</label>
+        <input type="text" name="title" id="title" />
+        <label for="image-url">Examen</label>
+        <input type="text" name="image-url" id="image-url" />
+        <label  for="rating">Nota</label>
+        <input
+          type="number"
+          step="1.0"
+          max="5.0"
+          min="1.0"
+          name="rating"
+          id="rating"
+        />
+      </div>
+      <div class="modal__actions">
+        <button class="btn btn--passive">Cancel</button>
+        <button class="btn btn--success">Add</button>
+      </div>
+    </div>
+    <div class="modal" id="delete-modal">
+      <h2 class="modal__title">Seguro desea eliminar?</h2>
+      <p class="modal__content">
+        Esta completamente seguro? No se puede restaurar mejor!
+      </p>
+      <div class="modal__actions">
+        <button class="btn btn--passive">No (Cancel)</button>
+        <button class="btn btn--danger">Si</button>
+      </div>
+    </div>
+
+    <header>
+      <h1>Notas Alumnos Bootcamp</h1>
+      <button>Agregar Alumno</button>
+    </header>
+
+    <main>
+      <section id="entry-text" class="card">
+        <p>Notas de clase del bootcamp!</p>
+      </section>
+      <ul id="alumnos-list"></ul>
+    </main>
+  </body>
+</html>
